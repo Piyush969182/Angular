@@ -1,0 +1,21 @@
+<p>list works!</p>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Username</td>
+        <td>Email</td>
+        <td>Action</td>
+    </tr>
+    <tr *ngFor="let item of users">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.username}}</td>
+        <td>{{item.email}}</td>
+        <td>
+            <button routerLink="./details/{{item.id}}">Details</button>
+            <button routerLink="./edit/{{item.id}}">Edit</button>
+        </td>
+    </tr>
+</table>
+<router-outlet></router-outlet>
